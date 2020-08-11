@@ -1,0 +1,283 @@
+/*------------------------------------
+    全体
+-------------------------------------*/
+*, *:before, *:after {
+    -webkit-box-sizing: border-box;
+       -moz-box-sizing: border-box;
+         -o-box-sizing: border-box;
+        -ms-box-sizing: border-box;
+            box-sizing: border-box;
+}
+
+body{
+    font-family: 'YuGothic','Yu Gothic','Hiragino Kaku Gothic ProN','ヒラギノ角ゴ ProN W3','メイリオ', 'Meiryo','ＭＳ ゴシック',sans-serif;
+}
+
+#contents {
+    background-color: #dcdddd;
+}
+
+.section-title {
+    font-size: 60px;
+    text-align: center;
+}
+
+#inner span {
+    margin-left: 20px;
+}
+
+/*------------------------------------
+    ヘッダー
+-------------------------------------*/
+#header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 480px;
+    background: url(../img/header/fuji_header.jpg) center;
+    background-repeat: no-repeat;
+}
+
+.logo-title {
+    font-family: 'Oswald', sans-serif;
+    font-size: 75px;
+    color: #f3f3f2;
+    line-height: 1;
+    letter-spacing: -1px;
+    font-weight: 600;
+    text-align: left;
+}
+
+.logo-sub {
+    display: block;
+    font-size: 36px;
+    text-align: left;
+    margin-top: 30px;
+    color: #f3f3f2;
+}
+
+.hamburger {
+    align-self: center;
+    text-align: center;
+    height: 480px;
+}
+
+/*------------------------------------
+    Profile
+-------------------------------------*/
+.profile-image {
+    text-align: center;
+    margin: 50px;
+}
+
+#Profile .text {
+    text-align: center;
+}
+
+#Profile img {
+    width: 300px;
+    height: auto;
+}
+
+/*------------------------------------
+    Skill
+-------------------------------------*/
+.section-title-block{
+    margin: 50px;
+}
+
+.skill-contents {
+    width: 90%;
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;                                /* flex内のアイテム折り返し */
+    justify-content: space-between;                 /* アイテム間スペースを均等に */
+}
+
+.skill-table-block {
+    flex-basis: 50%;                                /* flex内アイテムの基本幅の指定 */
+    margin-bottom: 50px;
+    display: -webkit-box;                           /* 各tableの高さを揃える */
+}
+
+.skill-write {
+    text-align: center;
+    border: solid 1px;
+    background-color: white;
+    margin: 10px 50px;
+}
+
+.skill-title {
+    margin: 30px;
+}
+
+table {
+    table-layout: fixed;                            /* テーブルの列幅を固定 */
+    width: 100%;
+}
+
+/*------------------------------------
+    Works
+-------------------------------------*/
+.work-cards {
+    width: 80%;
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;                                /* flex内のアイテム折り返し */
+    justify-content: space-between;                 /* アイテム間スペースを均等に */
+}
+
+.card {
+    flex-basis: 30%;                                /* flex内アイテムの基本幅の指定 */
+    margin-bottom: 50px;
+    display: -webkit-box;                           /* 各tableの高さを揃える */
+}
+
+.card-image {
+    width: 100%;
+    margin: 0 auto 5px;
+}
+
+.card-write {
+    text-align: center;
+}
+
+/*------------------------------------
+    Contact
+-------------------------------------*/
+.contact-write {
+    text-align: center;
+    padding-top: 10px;
+}
+
+/*------------------------------------
+    フッター
+-------------------------------------*/
+footer {
+    text-align: center;
+    background-color: #494a41;
+    padding-bottom: 1px;
+}
+
+.footer-link ul {
+    display: flex;
+    flex-wrap: wrap;                                /* flex内のアイテム折り返し */
+    justify-content: space-evenly;                 /* アイテム間スペースを均等に */
+    padding-top: 20px;
+}
+
+.footer-link ul li a {
+    color: #dcdddd;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.copyright {
+    color: #dcdddd;
+    font-size: 15px;
+}
+
+/*------------------------------------
+    ハンバーガーメニュー（Main-link）
+-------------------------------------*/
+#main-link {
+    background-color: #16160e;
+    position: fixed;
+    top: 0;
+    right: -250px;
+    width: 250px;
+    height: 100%;
+}
+
+.link-title {
+    font-size: 30px;
+    font-weight: bold;
+    text-align: center;
+    color: #f3f3f2;
+}
+
+#main-link li {
+    max-width: 200px;
+    border-bottom: dotted #83ccd2 2px;
+}
+
+#main-link li, .main-link li a {
+    color: #f3f3f2;
+    font-size: 20px;
+    padding: 10px;
+}
+
+#main-link ul li a {
+    margin-left: 10px;
+    color: #f3f3f2;
+}
+
+/* ハンバーガーボタン、クリック時のスタイル */
+.show {
+    transform: translate3d(-250px, 0, 0);
+}
+
+/* 開く・閉じるアニメーション */
+#contents, #main-link {
+    transition: transform 0.3s;
+}
+
+#main-link .close {
+    margin-right: 33%;
+    font-size: 30px;
+    color: hsl(60, 4%, 95%, 0.1);
+}
+
+/*------------------------------------
+    media Queries 767
+-------------------------------------*/
+@media screen and (max-width: 767px) {
+    .section-title {
+        font-size: 30px;
+    }
+
+    /*------------------------------------
+    ヘッダー
+    -------------------------------------*/
+    .logo-title {
+        font-size: 45px;
+    }
+
+    .logo-sub {
+        font-size: 30px;
+    }
+
+    /*------------------------------------
+        Profile
+    -------------------------------------*/
+    #Profile .text {
+        text-align: center;
+    }
+
+    #Profile img {
+        width: 80%;
+    }
+
+    /*------------------------------------
+        Skill
+    -------------------------------------*/
+    .skill-write {
+        border: solid 1px;
+        margin: 0 10px 0px 50px;
+        padding: 0 80px 0 50px;
+        font-size: 15px;
+    }
+
+    /*------------------------------------
+        Works
+    -------------------------------------*/
+    .card-write {
+        font-size: 10px;
+    }
+    /*------------------------------------
+        フッター
+    -------------------------------------*/
+    .copyright {
+        font-size: 12px;
+    }
+}
